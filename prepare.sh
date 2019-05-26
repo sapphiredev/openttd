@@ -16,9 +16,9 @@ apt-get dist-upgrade -y -qq
 ## Install things we need
 $minimal_apt_get_install wget unzip libfontconfig1 libfreetype6 liblzo2-2 libsdl1.2debian
 
-## Install libicu52
-wget -q http://launchpadlibrarian.net/201330288/libicu52_52.1-8_amd64.deb
-dpkg -i libicu52_52.1-8_amd64.deb
+## Install libicu55
+wget -q https://launchpad.net/~ubuntu-security-proposed/+archive/ubuntu/ppa/+build/14502314/+files/libicu55_55.1-7ubuntu0.4_amd64.deb
+dpkg -i libicu55_55.1-7ubuntu0.4_amd64.deb
 
 ## Create user
 mkdir -p /home/openttd/.openttd
@@ -27,8 +27,8 @@ usermod -G users openttd
 chown openttd:openttd /home/openttd -R
 
 ## Download and install openttd
-wget -q https://proxy.binaries.openttd.org/openttd-releases/${OPENTTD_VERSION}/openttd-${OPENTTD_VERSION}-linux-ubuntu-bionic-amd64.deb
-dpkg -i openttd-${OPENTTD_VERSION}-linux-ubuntu-trusty-amd64.deb
+wget -q https://proxy.binaries.openttd.org/openttd-releases/${OPENTTD_VERSION}/openttd-${OPENTTD_VERSION}-linux-ubuntu-xenial-amd64.deb
+dpkg -i openttd-${OPENTTD_VERSION}-linux-ubuntu-xenial-amd64.deb
 mkdir -p /etc/service/openttd/
 
 ## Download GFX and install
